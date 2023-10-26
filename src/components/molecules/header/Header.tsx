@@ -104,7 +104,7 @@ function Header() {
             : "mobile:transform mobile:translate-x-[-14rem]"
         }`}
       >
-        <div className="w-1 h-full bg-gray-200"></div>
+        <div className="w-[.1rem] h-full bg-gray-200"></div>
       </div>
     </header>
   );
