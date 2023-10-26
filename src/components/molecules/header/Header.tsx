@@ -98,7 +98,7 @@ function Header() {
         <ul>{icons}</ul>
       </nav>
       <div
-        className={`w-full h-1/4 flex justify-center self-end mobile:absolute mobile:bottom-0 mobile:w-[40%] transition-transform duration-500 ease-in-out z-50 ${
+        className={`w-full h-1/4 flex justify-center self-end mobile:fixed mobile:bottom-0 mobile:w-[40%] transition-transform duration-500 ease-in-out z-50  ${
           showMenu
             ? "mobile:transform mobile:translate-x-0"
             : "mobile:transform mobile:translate-x-[-14rem]"
