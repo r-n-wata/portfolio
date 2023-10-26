@@ -35,6 +35,7 @@ function Header() {
 
       for (const section in sections) {
         if (Object.prototype.hasOwnProperty.call(sections, section)) {
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
           const { offsetTop, offsetHeight } = sections[section]!;
           if (
             scrollPosition >= offsetTop &&
@@ -90,7 +91,11 @@ function Header() {
       >
         <ul>{icons}</ul>
       </nav>
-      <div className="w-full h-1/4 flex justify-center self-end mobile:absolute mobile:bottom-0 mobile:w-[40%] mobile:hidden">
+      <div
+        className={`w-full h-1/4 flex justify-center self-end mobile:absolute mobile:bottom-0 mobile:w-[40%] mobile:hidden ${
+          showMenu && "mobile:flex"
+        }`}
+      >
         <div className="w-1 h-full bg-gray-200"></div>
       </div>
     </header>

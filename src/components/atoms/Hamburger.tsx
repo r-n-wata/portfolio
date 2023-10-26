@@ -8,7 +8,7 @@ function Hamburger({ showMenu, toggleMenu }: HamburgerProps) {
   return (
     <button
       className={`hidden mobile:flex top-2 -right-2 z-40 w-10 h-10 text-gray-800  mr-6 relative justify-center items-center transfrom-transition ${
-        showMenu ? "-right-32 " : ""
+        showMenu ? "-right-28 " : ""
       } duration-500 `}
       onClick={() => {
         toggleMenu();
