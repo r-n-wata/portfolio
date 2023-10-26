@@ -80,9 +80,15 @@ function Header() {
     </li>
   ));
 
+  console.log(showMenu, "header");
+
   return (
     <header className="bg-black fixed w-[5%] flex flex-col justify-center items-center h-full mobile:bg-inherit mobile:block mobile:w-full">
-      <Hamburger showMenu={showMenu} toggleMenu={toggleMenu} />
+      <div className="relative  w-full h-4 flex justify-start">
+        {" "}
+        <Hamburger showMenu={showMenu} toggleMenu={toggleMenu} />
+      </div>
+
       <a href="#home" className="h-1/4"></a>
       <nav
         className={`h-1/2 flex justify-center items-center mobile:flex-col mobile:fixed mobile:top-0 mobile:bg-black mobile:w-[40%] mobile:h-full transition-transform duration-500 ease-in-out z-10 ${
@@ -92,8 +98,10 @@ function Header() {
         <ul>{icons}</ul>
       </nav>
       <div
-        className={`w-full h-1/4 flex justify-center self-end mobile:absolute mobile:bottom-0 mobile:w-[40%] mobile:hidden ${
-          showMenu && "mobile:flex"
+        className={`w-full h-1/4 flex justify-center self-end mobile:absolute mobile:bottom-0 mobile:w-[40%] transition-transform duration-500 ease-in-out z-50 ${
+          showMenu
+            ? "mobile:transform mobile:translate-x-0"
+            : "mobile:transform mobile:translate-x-[-14rem]"
         }`}
       >
         <div className="w-1 h-full bg-gray-200"></div>
