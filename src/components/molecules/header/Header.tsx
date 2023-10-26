@@ -91,7 +91,7 @@ function Header() {
 
       <a href="#home" className="h-1/4"></a>
       <nav
-        className={`h-1/2 flex justify-center items-center mobile:flex-col mobile:fixed mobile:top-0 mobile:bg-black mobile:w-[40%] mobile:h-full transition-transform duration-500 ease-in-out z-10 ${
+        className={`h-1/2 flex justify-center items-center mobile:flex-col mobile:fixed  mobile:top-0 mobile:bg-black mobile:w-[40%] mobile:h-screen transition-transform duration-500 ease-in-out z-10 ${
           !showMenu ? "mobile:transform mobile:translate-x-[-14rem]" : ""
         }`}
       >
