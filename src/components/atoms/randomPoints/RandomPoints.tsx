@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import * as d3 from 'd3';
+import { useEffect, useRef } from "react";
+import * as d3 from "d3";
 
 const RandomPoint = () => {
   const svgRef = useRef(null);
@@ -18,19 +18,19 @@ const RandomPoint = () => {
     // Update points
     const updatePoints = () => {
       svg
-        .selectAll('circle')
+        .selectAll("circle")
         .data(points)
-        .join('circle')
-        .attr('width', 1)
-        .attr('r', 1)
-        .attr('cx', (d) => d.x)
-        .attr('cy', (d) => d.y)
-        .style('fill', 'orange')
-        .style('opacity', 0.8)
+        .join("circle")
+        .attr("width", 1)
+        .attr("r", 1)
+        .attr("cx", (d) => d.x)
+        .attr("cy", (d) => d.y)
+        .style("fill", "orange")
+        .style("opacity", 0.8)
         .transition()
         .duration(1000)
-        .attr('cx', (d) => Math.random() * width)
-        .attr('cy', (d) => Math.random() * height);
+        .attr("cx", () => Math.random() * width)
+        .attr("cy", () => Math.random() * height);
       // .on('end', updatePoints);
     };
 
